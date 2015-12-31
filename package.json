@@ -1,0 +1,19 @@
+{
+  "name": "vinvocci",
+  "description": "Simple JSON logger",
+  "version": "0.0.1-beta",
+  "license": "MIT",
+  "author": "Anatol Sommer <anatol@anatol.at>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anatolsommer/vinvocci.git"
+  },
+  "keywords": [
+    "json",
+    "logger"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
