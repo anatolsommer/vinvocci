@@ -1,7 +1,7 @@
 {
   "name": "vinvocci",
   "description": "Simple JSON logger",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "license": "MIT",
   "author": "Anatol Sommer <anatol@anatol.at>",
   "repository": {
