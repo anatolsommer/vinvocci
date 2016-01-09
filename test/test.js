@@ -101,8 +101,13 @@ function getOutput(cb) {
   process.stdout.write=function(data) {
     buf+=data;
   };
-  cb();
-  process.stdout.write=write;
+  try {
+    cb();
+    process.stdout.write=write;
+  } catch(err) {
+    process.stdout.write=write;
+    throw err;
+  }
   return convertToArray(buf);
 }
 
