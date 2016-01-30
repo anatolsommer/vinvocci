@@ -1,5 +1,5 @@
 # Vinvocci
-## Simple JSON logger
+Simple JSON logger
 
 
 ### Usage:
@@ -60,4 +60,12 @@ log.setLevel(Log.DEBUG);
 * 0 = ERROR
 * 1 = INFO (default)
 * 2 = DEBUG
+
+
+## Tests
+Run tests with `npm test` or generate coverage reports with `npm run test-cov`.
+
+
+## License
+#### MIT
 

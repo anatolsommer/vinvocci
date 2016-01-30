@@ -69,6 +69,17 @@ describe('Vinvocci', function() {
     assert.equal(res[0].app, 'compo');
   });
 
+  it('should log additional properties', function() {
+    Object.prototype.veryBad=true;
+    res=getOutput(function() {
+      log.debug('test1', {a:2, b:3});
+    });
+    delete Object.prototype.veryBad;
+    assert.equal(res[0].a, 2);
+    assert.equal(res[0].b, 3);
+    assert.equal(res[0].veryBad, undefined);
+  });
+
   it('should log to file', function(done) {
     log=new Log(null, null, file);
     log.info('test1');
@@ -90,10 +101,9 @@ describe('Vinvocci', function() {
     }, 30);
   });
 
-  it('should remove test log file', function() {
-    fs.unlinkSync(file);
+  after(function(done) {
+    fs.unlink(file, done);
   });
-
 });
 
 function getOutput(cb) {
